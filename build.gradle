@@ -15,6 +15,10 @@ buildscript {
         // in the individual module build.gradle files
     }
     ext {
+        compileSdkVersion = 28
+        minSdkVersion = 21
+        targetSdkVersion = 28
+
         constraintLayoutVersion = '1.1.3'
     }
 }

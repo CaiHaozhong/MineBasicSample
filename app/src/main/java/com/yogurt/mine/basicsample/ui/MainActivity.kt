@@ -1,5 +1,6 @@
 package com.yogurt.mine.basicsample.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
 import androidx.appcompat.app.AppCompatActivity
@@ -17,7 +18,15 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val contentView: Any =
+        val binding: ActivityMainBinding =
             DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
+
+        binding.btn01.setOnClickListener {
+            startActivity(Intent(this, ObservableFieldActivity::class.java))
+        }
+
+        binding.btn02.setOnClickListener {
+
+        }
     }
 }
